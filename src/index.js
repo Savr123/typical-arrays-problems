@@ -1,12 +1,24 @@
 
-exports.min = function min (array) {
-  return 0;
-}
+exports.min = (array) => {
+  try {
+    return array.reduce((a,b)=>a<b?a:b)
+  } catch (e){
+      return 0
+    }
+  };
 
-exports.max = function max (array) {
-  return 0;
-}
+exports.max = (array) => {
+  try {
+    return array.reduce((a,b)=>a>b?a:b);
+  } catch (e){
+      return 0
+    }
+  };
 
-exports.avg = function avg (array) {
-  return 0;
-}
+exports.avg = (array) => {
+  try {
+    return (array.reduce((a,b,i)=> a+b))/array.length;
+  } catch (e){
+      return 0
+    }
+  };
